@@ -1,11 +1,13 @@
 <?php
-start_session();
+session_start();
 /**
  * Created by PhpStorm.
  * User: Pavel
  * Date: 1/18/18
  * Time: 10:30 AM
  */
+error_reporting(0);
+ini_set('display_errors', 1);
 
 //require the autoload file
 require_once ('vendor/autoload.php');
