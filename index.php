@@ -21,7 +21,15 @@ $f3->route("GET /home", function() {
     echo $template->render('views/home.html');
 }
 );
-
+$f3->route("GET /pets/order", function(){
+echo "<h1>form 1.</h1>";
+}
+$f3->route("GET /pets/order2", function(){
+echo "<h1>form 2.</h1>";
+}
+$f3->route("GET /pets/results", function(){
+echo "<h1>Results.</h1>";
+}
 $f3->route("GET /show/@pet", function($f3, $params) {
 
     switch ($params['pet']) {
