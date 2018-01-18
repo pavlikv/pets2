@@ -1,0 +1,16 @@
+{
+  "name":"pvashchu/pets2",
+  "authors":[
+    {
+      "name":"Pavel Vashchuk",
+      "email":"pvashchuk@mail.greenriver.edu"
+    },
+    {
+      "name":"Pavel Radchuk",
+      "email":"pradchuk@mail.greenriver.edu"
+    }
+  ],
+  "require":{
+    "bcosca/fatfree-core":"dev-master"
+  }
+}
