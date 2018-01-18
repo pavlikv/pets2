@@ -22,5 +22,20 @@ $f3->route("GET /home", function() {
 }
 );
 
+$f3->route("GET /show/@pet", function($f3, $params) {
+
+    switch ($params['pet']) {
+        case 'dog':
+            echo "<img src=\"https://www.nationalgeographic.com/content/dam/animals/thumbs/rights-exempt/mammals/d/domestic-dog_thumb.jpg\">";
+            break;
+        case 'cat':
+            echo "<img src=\"https://www.petmd.com/sites/default/files/petmd-cat-happy-10.jpg\">";
+            break;
+        default:
+            $f3->error(404);
+    }
+}
+);
+
 //run Fat-Free
 $f3->run();
