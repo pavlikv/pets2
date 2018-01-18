@@ -32,11 +32,17 @@ $f3->route("GET /pets/order", function(){
 $f3->route("POST /pets/order2", function(){
     $template = new Template();
     echo $template->render('views/form2.html');
+
+    $_SESSION['animal'] = $_POST['animal'];
+
 }
 );
 
-$f3->route("GET /pets/results", function(){
-    echo "Results";
+$f3->route("POST /pets/results", function(){
+
+    $_SESSION['color'] = $_POST['color'];
+    echo "<h1>Results Page</h1>";
+    echo "Thank you for order a ".$_SESSION['color']. " ".$_SESSION['animal'];
 }
 );
 $f3->route("GET /show/@pet", function($f3, $params) {
