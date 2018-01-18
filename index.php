@@ -1,4 +1,5 @@
 <?php
+start_session();
 /**
  * Created by PhpStorm.
  * User: Pavel
@@ -26,15 +27,14 @@ $f3->route("GET /pets/order", function(){
     echo $template->render('views/form1.html');
 }
 );
-$f3->route("GET /pets/order2", function(){
+$f3->route("POST /pets/order2", function(){
     $template = new Template();
     echo $template->render('views/form2.html');
 }
 );
 
 $f3->route("GET /pets/results", function(){
-    $template = new Template();
-    echo $template->render('views/results.html');
+    echo "Results";
 }
 );
 $f3->route("GET /show/@pet", function($f3, $params) {
