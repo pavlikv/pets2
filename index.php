@@ -16,22 +16,25 @@ $f3 = Base::instance();
 $f3->set('DEBUG', 3);
 
 //define a default route
-$f3->route("GET /home", function() {
+$f3->route("GET /", function() {
     $template = new Template();
     echo $template->render('views/home.html');
 }
 );
 $f3->route("GET /pets/order", function(){
-echo "<h1>form 1.</h1>";
+    $template = new Template();
+    echo $template->render('views/form1.html');
 }
 );
 $f3->route("GET /pets/order2", function(){
-echo "<h1>form 2.</h1>";
+    $template = new Template();
+    echo $template->render('views/form2.html');
 }
 );
 
 $f3->route("GET /pets/results", function(){
-echo "<h1>Results.</h1>";
+    $template = new Template();
+    echo $template->render('views/results.html');
 }
 );
 $f3->route("GET /show/@pet", function($f3, $params) {
